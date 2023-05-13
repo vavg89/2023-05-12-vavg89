@@ -13,7 +13,19 @@ const ordenarPorEdad = require("../controllers/05-controller");
 
 */
 
-router.get("/animalesOrdenados", (req, res) => {});
+router.get("/animalesOrdenados", (req, res) => {
+ let  animales=req.body
+  try{
+    if(animales) {
+   let respuesta = ordenarPorEdad()
+    res.status(200).json(respuesta)
+  }
+}
+   catch (err) {
+    res.status(400).json({err: 'No se encontraron animales'})
+  }
+
+})
 
 //⚠️ No modificar nada debajo de esta línea ⚠️
 module.exports = router;

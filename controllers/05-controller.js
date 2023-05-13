@@ -1,4 +1,6 @@
 const utils = require("../utils");
+var _ = require('lodash');
+ 
 /*⚠️ No modificar nada arriba de esta línea ⚠️
 
   5️⃣ ***** EJERCICIO 5 ***** - ordenarPorEdad 5️⃣:
@@ -12,7 +14,14 @@ const utils = require("../utils");
   1) Recuerda que el mensaje de error deben ser exactamente como lo pide el enunciado.
 */
 
-const ordenarPorEdad = () => {};
+const ordenarPorEdad = () => {
+    if (utils.animal.length===0) {
+    throw new Error("No se encontraron animales");
+  } 
+  let Animales=utils.animal
+  let sortedByYearDesc = _.sortBy(Animales, 'edad').reverse();
+  return sortedByYearDesc;
+};
 
 // ⚠️ No modificar nada debajo de esta línea ⚠️
 module.exports = ordenarPorEdad;

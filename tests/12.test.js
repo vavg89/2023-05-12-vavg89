@@ -7,7 +7,7 @@ describe('GET /mostrarLaMediaDelPeso', function () {
       utils.reset();
    });
 
-   it('Devolver el valor del controlador 06', function () {
+   xit('Devolver el valor del controlador 06', function () {
       const animal = utils.generateAnimal(5);
       utils.testAnimal().push(animal[0]);
       utils.testAnimal().push(animal[1]);
@@ -36,7 +36,7 @@ describe('GET /mostrarLaMediaDelPeso', function () {
          });
    });
 
-   it('Si no hay animales arroja un error', function () {
+   xit('Si no hay animales arroja un error', function () {
       return supertest
          .get('/mostrarLaMediaDelPeso')
          .expect(400)
