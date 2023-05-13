@@ -1,0 +1,20 @@
+{
+  "animal": [
+    {
+      "id": "asd456asd-4as6546asd-12a32r4",
+      "name": "perro",
+      "edad": 6,
+      "peso": "20 Kilos",
+      "altura": "50cm",
+      "descripción": "Es un amigo fiel"
+    },
+    {
+      "id": "asd496fdd-4as6546arf-333a32r4",
+      "name": "jirafa",
+      "edad": 15,
+      "peso": "200 Kilos",
+      "altura": "300cm",
+      "descripción": "Tiene el cuello muy largo"
+    }
+  ]
+}
