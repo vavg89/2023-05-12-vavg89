@@ -15,6 +15,7 @@ const addAnimal = require("../controllers/01-controller");
   2) ¡Revisa en los test el status que deben tener tus respuestas!
 */
 
+
 router.post("/animal", (req, res) => {
   try {
 
