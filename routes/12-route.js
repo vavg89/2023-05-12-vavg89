@@ -13,7 +13,18 @@ const mostrarLaMediaDelPeso = require("../controllers/06-controller");
   3) ¡Revisa en los test el status que deben tener tus respuestas!
 */
 
-router.get("/mostrarLaMediaDelPeso", (req, res) => {});
+router.get("/mostrarLaMediaDelPeso", (req, res) => {
+  let  animales=req.body
+  try{
+    if(animales) {
+   let respuesta = mostrarLaMediaDelPeso()
+    res.status(200).json({results: respuesta})
+  }
+}
+   catch (err) {
+    res.status(400).json({err: 'No tenemos valores'})
+  }
+});
 
 //⚠️ No modificar nada debajo de esta línea ⚠️
 module.exports = router;

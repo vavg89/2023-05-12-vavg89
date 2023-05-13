@@ -26,7 +26,6 @@ if (undef) {
     
     ResAnimal= animal.peso +  " " + "Kilos"
     ResAltura= animal.altura + "cm"
-    console.log(ResAnimal,ResAltura);
   
     anima[0].peso =ResAnimal;
     anima[0].altura =ResAltura;

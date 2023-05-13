@@ -13,7 +13,7 @@ describe('---------- `mostrarLaMediaDelPeso` ----------', function () {
       utils.reset();
    });
 
-   xit('Retornar la media del peso de los animales', function () {
+   it('Retornar la media del peso de los animales', function () {
       const animal = utils.generateAnimal(10);
       utils.testAnimal().push(animal[0]);
       utils.testAnimal().push(animal[1]);
@@ -48,7 +48,7 @@ describe('---------- `mostrarLaMediaDelPeso` ----------', function () {
       );
    });
 
-   xit('Debe arrojar un error si no hay animales', function () {
+   it('Debe arrojar un error si no hay animales', function () {
       expect(() => mostrarLaMediaDelPeso()).to.throw('No tenemos valores');
    });
 });

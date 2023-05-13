@@ -11,7 +11,22 @@ const utils = require("../utils");
    2) el peso es un string, debemos de encontrar la manera de extraer solo el valor numerico y transformarlo en un numero.
 */
 
-const mostrarLaMediaDelPeso = () => {};
+const mostrarLaMediaDelPeso = () => {
+  let animales = utils.animal;
+  let total = 0;
+ if(animales.length===0)throw new Error('No tenemos valores')
+
+ let mapPesoextractor = animales.map((ani) => ani.peso)
+ 
+
+for (let i = 0; i < mapPesoextractor.length; i++) {
+  const elemento = mapPesoextractor[i];
+  const numero = parseInt(elemento.split(' ')[0]);
+  total += numero;
+}
+let totalPPromedio= total / animales.length
+return Math.trunc(totalPPromedio)
+};
 
 //⚠️ No modificar nada debajo de esta línea ⚠️
 module.exports = mostrarLaMediaDelPeso;
