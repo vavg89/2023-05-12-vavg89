@@ -15,6 +15,23 @@ const updateAnimal = require("../controllers/03-controller");
 
 */
 
-router.put("/animal", (req, res) => {});
+router.put("/animal", (req, res) => {
+  const { animal } = req.body
+  let animalAct = {
+    id: undefined,
+    name: undefined,
+    edad: undefined,
+    peso: undefined,
+    altura: undefined,
+    tipoDeDieta:undefined
+          }
+      animalAct = {...animalAct, ...animal}
+  try {
+    updateAnimal(animalAct);
+    res.status(200).json({ message: "Animal actualizado correctamente" });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 //⚠️ No modificar nada debajo de esta línea ⚠️
 module.exports = router;
