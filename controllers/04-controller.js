@@ -8,5 +8,10 @@ Busca un animal por ID. Elimínalo de la base de datos y responde con el array d
 Si no existe un animal con ese ID, arrojá un error que diga: `No existe el animal con id: ${animalId}`.
 */
 
-const deleteAnimal = (animalId) => {};
+const deleteAnimal = (animalId) => {
+    if (!utils.animal.find(ani => ani.id === animalId)) throw Error(`No existe el animal con id: ${animalId}`)
+let animales = utils.animal.filter(ani => ani.id !== animalId)
+utils.animal = animales
+return animales  
+};
 module.exports = deleteAnimal;
